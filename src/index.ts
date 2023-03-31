@@ -15,4 +15,4 @@ const getEmployees = (employees: Array<employee>, age: number): Array<employee> 
   return employees.filter((employee) => employee.age > age);
 };
 
-console.log('Employees above 30 years', getEmployees(employees, 30));
+console.log('Employees above 30 years.', getEmployees(employees, 30));

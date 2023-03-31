@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+
+   "scripts": {    
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
@@ -26,7 +27,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
+  }, 
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint . --ext .ts"
+    ]
   }
 }
